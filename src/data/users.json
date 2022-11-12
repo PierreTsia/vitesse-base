@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Cersei Lannister",
+      "job_title": "Software Engineer",
+      "score_map": {
+        "mobile": 1,
+        "front-end": 1,
+        "back-end": 1,
+        "dev-ops": 1,
+        "data engineer": 1,
+        "quality": 1,
+        "security engineer": 1,
+        "project management": 1,
+        "communication": 1,
+        "craft": 1,
+        "initiative": 1,
+        "career development": 1,
+        "org design": 1,
+        "well-being": 1,
+        "accomplishment": 1,
+        "mentorship": 1,
+        "evangelism": 1,
+        "recruiting": 1,
+        "community": 1
+      }
+    }
+  ]
+}
