@@ -6,6 +6,6 @@ context("Profile Page", () => {
   it("profile-page base elements", () => {
     cy.url().should("eq", "http://localhost:3333/profile/1");
 
-    cy.contains("Cersei Lannister").should("exist");
+    cy.get("[data-test-id='']").should("exist");
   });
 });

@@ -1,5 +1,5 @@
-import { users } from "~/data/users.json";
 import type { FullScoreMap } from "~/types/index";
+import { supabase } from "~/plugins/supabase";
 
 interface User {
   id: number;
@@ -10,7 +10,18 @@ interface User {
 
 export const useApi = () => {
   const getUserById = async (id: number) => {
-    return (users as User[]).find((user) => user.id === id) || null;
+    const { data, error } = await supabase
+      .from("users")
+      .select("*")
+      .eq("id", id);
+
+    if (data) {
+      return data[0] as User;
+    }
+    if (error) {
+      throw new Error(error.message);
+    }
+    return null;
   };
 
   return {
