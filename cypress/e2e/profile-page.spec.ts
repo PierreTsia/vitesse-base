@@ -14,6 +14,6 @@ context("Profile Page", () => {
       fixture: "users.json",
     }).as("getUserById");
 
-    cy.contains("Cersei Lannister").should("exist");
+    cy.get("[data-test-id='']").should("exist");
   });
 });

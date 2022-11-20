@@ -1,0 +1,322 @@
+{
+  "building": [
+    {
+      "track": null,
+      "description": "Development of high quality production features and supporting infrastructure. Leveraging empathy for the client to understand problems thoroughly, and experience to design appropriate technical solutions.",
+      "requirements": {
+        "software engineering": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 2,
+          "L3": 3
+        },
+        "technical leadership": {
+          "L4": 3,
+          "L5": 4,
+          "L6": 4,
+          "L7": 5
+        },
+        "managerial leadership": {
+          "L4": 3,
+          "L5": 3,
+          "L6": 3,
+          "L7": 3
+        }
+      }
+    }
+  ],
+  "executing": [
+    {
+      "track": "project management",
+      "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
+      "requirements": {
+        "software engineering": {
+          "L0": 0,
+          "L1": 0,
+          "L2": 1,
+          "L3": 2
+        },
+        "technical leadership": {
+          "L4": 2,
+          "L5": 3,
+          "L6": 3,
+          "L7": 3
+        },
+        "managerial leadership": {
+          "L4": 3,
+          "L5": 4,
+          "L6": 4,
+          "L7": 5
+        }
+      }
+    },
+    {
+      "track": "communication",
+      "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
+      "requirements": {
+        "software engineering": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 1,
+          "L3": 2
+        },
+        "technical leadership": {
+          "L4": 2,
+          "L5": 3,
+          "L6": 3,
+          "L7": 4
+        },
+        "managerial leadership": {
+          "L4": 3,
+          "L5": 4,
+          "L6": 4,
+          "L7": 5
+        }
+      }
+    },
+    {
+      "track": "craft",
+      "description": "Embodies and promotes practices to ensure excellent quality products and services",
+      "requirements": {
+        "software engineering": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 2,
+          "L3": 3
+        },
+        "technical leadership": {
+          "L4": 4,
+          "L5": 4,
+          "L6": 5,
+          "L7": 5
+        },
+        "managerial leadership": {
+          "L4": 3,
+          "L5": 3,
+          "L6": 3,
+          "L7": 3
+        }
+      }
+    },
+    {
+      "track": "initiative",
+      "description": "Challenges the status quo and effects positive organizational change outside of mandated work",
+      "requirements": {
+        "software engineering": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 2,
+          "L3": 3
+        },
+        "technical leadership": {
+          "L4": 3,
+          "L5": 4,
+          "L6": 4,
+          "L7": 5
+        },
+        "managerial leadership": {
+          "L4": 3,
+          "L5": 4,
+          "L6": 4,
+          "L7": 5
+        }
+      }
+    }
+  ],
+  "supporting": [
+    {
+      "track": "career development",
+      "description": "Provides strategic support to engineers to help them build the career they want",
+      "requirements": {
+        "software engineering": {
+          "L0": 0,
+          "L1": 0,
+          "L2": 1,
+          "L3": 1
+        },
+        "technical leadership": {
+          "L4": 2,
+          "L5": 2,
+          "L6": 3,
+          "L7": 3
+        },
+        "managerial leadership": {
+          "L4": 3,
+          "L5": 4,
+          "L6": 4,
+          "L7": 5
+        }
+      }
+    },
+    {
+      "track": "org design",
+      "description": "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
+      "requirements": {
+        "software engineering": {
+          "L0": 0,
+          "L1": 0,
+          "L2": 1,
+          "L3": 2
+        },
+        "technical leadership": {
+          "L4": 2,
+          "L5": 2,
+          "L6": 3,
+          "L7": 3
+        },
+        "managerial leadership": {
+          "L4": 2,
+          "L5": 3,
+          "L6": 4,
+          "L7": 5
+        }
+      }
+    },
+    {
+      "track": "well-being",
+      "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
+      "requirements": {
+        "software engineering": {
+          "L0": 0,
+          "L1": 0,
+          "L2": 1,
+          "L3": 1
+        },
+        "technical leadership": {
+          "L4": 2,
+          "L5": 2,
+          "L6": 3,
+          "L7": 3
+        },
+        "managerial leadership": {
+          "L4": 2,
+          "L5": 3,
+          "L6": 4,
+          "L7": 5
+        }
+      }
+    },
+    {
+      "track": "accomplishment",
+      "description": "Inspires day to day excellence, maximizes potential and effectively resolves performance issues with compassion",
+      "requirements": {
+        "software engineering": {
+          "L0": 0,
+          "L1": 0,
+          "L2": 1,
+          "L3": 1
+        },
+        "technical leadership": {
+          "L4": 2,
+          "L5": 2,
+          "L6": 2,
+          "L7": 3
+        },
+        "managerial leadership": {
+          "L4": 3,
+          "L5": 3,
+          "L6": 4,
+          "L7": 5
+        }
+      }
+    }
+  ],
+  "strengthening": [
+    {
+      "track": "mentorship",
+      "description": "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
+      "requirements": {
+        "software engineering": {
+          "L0": 0,
+          "L1": 0,
+          "L2": 1,
+          "L3": 2
+        },
+        "technical leadership": {
+          "L4": 3,
+          "L5": 3,
+          "L6": 3,
+          "L7": 4
+        },
+        "managerial leadership": {
+          "L4": 3,
+          "L5": 3,
+          "L6": 4,
+          "L7": 5
+        }
+      }
+    },
+    {
+      "track": "evangelism",
+      "description": "Promotes Ankorstore to the outside world and establishes it as an attractive and thoughtful place to work",
+      "requirements": {
+        "software engineering": {
+          "L0": 0,
+          "L1": 0,
+          "L2": 0,
+          "L3": 1
+        },
+        "technical leadership": {
+          "L4": 1,
+          "L5": 2,
+          "L6": 2,
+          "L7": 3
+        },
+        "managerial leadership": {
+          "L4": 1,
+          "L5": 2,
+          "L6": 2,
+          "L7": 3
+        }
+      }
+    },
+    {
+      "track": "recruiting",
+      "description": "Strengthens Ankorstore's team by bringing in excellent staff members",
+      "requirements": {
+        "software engineering": {
+          "L0": 0,
+          "L1": 0,
+          "L2": 1,
+          "L3": 2
+        },
+        "technical leadership": {
+          "L4": 2,
+          "L5": 3,
+          "L6": 3,
+          "L7": 4
+        },
+        "managerial leadership": {
+          "L4": 2,
+          "L5": 3,
+          "L6": 4,
+          "L7": 4
+        }
+      }
+    },
+    {
+      "track": "community",
+      "description": "Builds community internally, gives of themself to the team, and champions and extols company values",
+      "requirements": {
+        "software engineering": {
+          "L0": 0,
+          "L1": 0,
+          "L2": 1,
+          "L3": 1
+        },
+        "technical leadership": {
+          "L4": 2,
+          "L5": 3,
+          "L6": 4,
+          "L7": 4
+        },
+        "managerial leadership": {
+          "L4": 2,
+          "L5": 3,
+          "L6": 4,
+          "L7": 4
+        }
+      }
+    }
+  ]
+}
