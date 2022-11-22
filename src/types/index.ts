@@ -15,7 +15,7 @@ export interface ISkill {
 export interface ITrack {
   id: TrackId;
   description: TrackDescription;
-  ladder: ITrackLevel[];
+  steps: ITrackLevel[];
 }
 
 export interface ITrackLevel {
