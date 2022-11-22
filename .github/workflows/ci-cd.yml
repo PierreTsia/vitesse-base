@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-
+env:
+  ## Sets environment variable
+  VITE_SUPABASE_URL: TEST_URL
+  VITE_SUPABASE_ANON_KEY: TEST_KEY
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -82,7 +85,7 @@ jobs:
       - run: pnpm install
 
       - name: Cypress PNPM Patch
-        run: cp pnpm-lock.yaml package-lock.json
+        run: echo "The API URL is:${{env.VITE_SUPABASE_URL}}" && cp pnpm-lock.yaml package-lock.json
 
       - name: Cypress
         uses: cypress-io/github-action@v4
