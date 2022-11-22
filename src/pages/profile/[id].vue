@@ -6,7 +6,6 @@ import { useApi } from "~/composables/api";
 import type { ISkill, ITrack } from "~/types";
 
 const props = defineProps<{ id: string }>();
-const router = useRouter();
 const { t } = useI18n();
 const user: Ref<{ id: number; name: string } | null> = ref(null);
 const skills: Ref<ISkill[] | null> = ref(null);
@@ -30,7 +29,7 @@ watchEffect(async () => {
       <div i-carbon-pedestrian inline-block />
     </div>
 
-    <p data-test-id="user-profile" v-if="user">
+    <p v-if="user" data-test-id="user-profile">
       {{ t("intro.hi", { name: user.name }) }}
     </p>
     <div v-if="skills" data-test-id="skills" class="w-full flex flex-wrap">
