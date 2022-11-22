@@ -6,8 +6,8 @@ on:
       - main
 env:
   ## Sets environment variable
-  VITE_SUPABASE_URL: TEST_URL
-  VITE_SUPABASE_ANON_KEY: TEST_KEY
+  VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+  VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
 jobs:
   lint:
     runs-on: ubuntu-latest
