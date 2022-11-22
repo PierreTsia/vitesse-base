@@ -1,5 +1,9 @@
+import { type ViteSSGContext } from 'vite-ssg'
 import type { SkillId } from "~/data/skills";
 import type { TrackDescription, TrackId } from "~/data/tracks";
+
+
+export type UserModule = (ctx: ViteSSGContext) => void
 
 export interface ISkill {
   id: SkillId;

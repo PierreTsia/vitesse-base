@@ -1,4 +1,4 @@
-import type { FullScoreMap } from "~/types/index";
+import type { FullScoreMap, ISkill } from "~/types";
 import { supabase } from "~/plugins/supabase";
 
 interface User {
@@ -24,7 +24,24 @@ export const useApi = () => {
     return null;
   };
 
+  const getSkillsTracks = async () => {
+    const { data, error } = await supabase
+      .from("skills")
+      .select(
+        "id, description, indicators, tracks(id, description, steps(description, score, examples))"
+      );
+
+    if (data) {
+      return data as unknown as ISkill[];
+    }
+    if (error) {
+      throw new Error(error.message);
+    }
+    return null;
+  };
+
   return {
     getUserById,
+    getSkillsTracks,
   };
 };
