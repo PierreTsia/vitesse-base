@@ -29,8 +29,7 @@ const activeStep: Ref<ITrackLevel | null> = ref(null);
         </li>
       </ul>
       <div class="w-8/10" data-test-id="active-step-details">
-
-
+        {{ activeStep?.id }}
       </div>
     </div>
   </section>
