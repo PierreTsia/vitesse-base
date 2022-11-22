@@ -9,7 +9,7 @@ export const skills: ISkill[] = skillIds.map((skillId) => ({
   tracks: tracksBySkillId[skillId].map((trackId) => ({
     id: trackId,
     description: trackDescriptions[trackId],
-    ladder: trackLevels[trackId].map(([description, examples], i) => ({
+    steps: trackLevels[trackId].map(([description, examples], i) => ({
       description,
       examples,
       score: (i + 1) as TrackScore,
