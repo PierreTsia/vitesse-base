@@ -12,7 +12,9 @@ const activeStep: Ref<ITrackLevel | null> = ref(null);
 
 <template>
   <section class="mt-6" data-test-id="selected-track-details">
-
+    <h2 class="text-4xl font-extra-bold text-left">
+      {{ capitalize(track.id) }}
+    </h2>
     <h6 class="font-thin text-left text-lg text-gray-400 border-b pb-8">
       {{ track.description }}
     </h6>
