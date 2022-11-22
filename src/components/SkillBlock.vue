@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { SkillId } from "~/data/skills";
 import type { ISkill, ITrack } from "~/types";
 import { capitalize } from "~/utils";
 
@@ -10,7 +11,7 @@ defineEmits<{
   (event: "selectTrack", track: ITrack): void;
 }>();
 
-const colors = new Map([
+const colors: Map<SkillId, string> = new Map([
   ["building", "#00AAC2"],
   ["executing", "#428AF6"],
   ["supporting", "#E1439F"],
@@ -33,11 +34,12 @@ const colors = new Map([
         <h4 class="text-0.6rem max-w-60px truncate overflow-hidden">
           {{ capitalize(t.id) }}
         </h4>
-        <div
-          class="border w-40px h-40px sm:w-50px sm:h-50px mx-auto"
-          :style="{ borderColor: colors.get(skill.id) }"
+        <ScoreBox
+          :color="colors.get(skill.id)"
           @click="$emit('selectTrack', t)"
-        ></div>
+        >
+          <slot :track-id="t.id" />
+        </ScoreBox>
       </li>
     </ul>
   </div>

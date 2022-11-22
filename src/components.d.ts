@@ -12,6 +12,7 @@ declare module '@vue/runtime-core' {
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ScoreBox: typeof import('./components/ScoreBox.vue')['default']
     SelectedTrackDetails: typeof import('./components/SelectedTrackDetails.vue')['default']
     SkillBlock: typeof import('./components/SkillBlock.vue')['default']
   }
