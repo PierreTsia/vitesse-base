@@ -9,6 +9,21 @@ interface User {
 }
 
 export const useApi = () => {
+  const getUserScoreMap = async (userId: number): Promise<any> => {
+    const { data, error } = await supabase
+      .from("users_score_maps")
+      .select("*")
+      .eq("user", userId);
+
+    if (error) {
+      throw error;
+    }
+    return data?.reduce((acc, row) => {
+      acc[row.track] = row.score;
+      return acc;
+    }, {});
+  };
+
   const getUserById = async (id: number) => {
     const { data, error } = await supabase
       .from("users")
@@ -43,5 +58,6 @@ export const useApi = () => {
   return {
     getUserById,
     getSkillsTracks,
+    getUserScoreMap,
   };
 };

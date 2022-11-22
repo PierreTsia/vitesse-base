@@ -1,24 +1,24 @@
 <script setup lang="ts">
 import type { Ref } from "vue-demi";
-import SelectedTrackDetails from "~/components/SelectedTrackDetails.vue";
-import SkillBlock from "~/components/SkillBlock.vue";
 import { useApi } from "~/composables/api";
-import type { ISkill, ITrack } from "~/types";
+import type { ISkill, ITrack, TrackEvaluation } from "~/types";
 
 const props = defineProps<{ id: string }>();
 const { t } = useI18n();
 const user: Ref<{ id: number; name: string } | null> = ref(null);
 const skills: Ref<ISkill[] | null> = ref(null);
 const selectedTrack: Ref<ITrack | null> = ref(null);
+const scoreMap: Ref<Record<string, TrackEvaluation>> = ref({});
 
 const setSelectedTrack = (track: ITrack) => {
   selectedTrack.value = track;
 };
 
-const { getUserById, getSkillsTracks } = useApi();
+const { getUserById, getSkillsTracks, getUserScoreMap } = useApi();
 
 watchEffect(async () => {
   user.value = await getUserById(+props.id);
+  scoreMap.value = await getUserScoreMap(+props.id);
   skills.value = await getSkillsTracks();
 });
 </script>
@@ -36,11 +36,15 @@ watchEffect(async () => {
       <SkillBlock
         v-for="s in skills"
         :key="s.id"
+        v-slot="{ trackId }"
         class="w-full md:w-1/2 lg:w-1/4"
         :skill="s"
         :data-test-id="`skill-${s.id}`"
         @select-track="setSelectedTrack"
       >
+        <span class="text-2xl relative top-4px md:top-8px">
+          {{ scoreMap[trackId] ?? 0 }}
+        </span>
       </SkillBlock>
     </div>
     <SelectedTrackDetails
