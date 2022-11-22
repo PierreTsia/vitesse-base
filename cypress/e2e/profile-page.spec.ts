@@ -45,7 +45,7 @@ context("Profile Page", () => {
     cy.get(".track").should("have.length", 19);
   });
 
-  it("should set the selected track on click and display name and description", () => {
+  it("should set the selected track on click", () => {
     cy.get("[data-test-id='track-front-end']").should("be.visible");
     cy.get("[data-test-id='track-front-end']").trigger("click");
 
@@ -66,11 +66,21 @@ context("Profile Page", () => {
     );
   });
 
-  it("should display a lasser with description of default level 1", () => {
+  it("should display the track levels info", () => {
     cy.get("[data-test-id='track-front-end']").trigger("click");
     cy.get("[data-test-id='steps-ladder']").should("be.visible");
     cy.get("[data-test-id='steps-ladder'] .step").should("have.length", 5);
 
     cy.get("[data-test-id='active-step-details']").should("be.visible");
+    cy.get("[data-test-id='active-step-details']").should(
+      "contain.text",
+      "Works effectively within established web client architectures, following current best practices"
+    );
+
+    cy.get("[data-test-id='steps-ladder'] .step").first().trigger("click");
+    cy.get("[data-test-id='active-step-details']").should(
+      "contain.text",
+      "Is an industry-leading expert in web client or sets strategic web client direction for an eng team"
+    );
   });
 });

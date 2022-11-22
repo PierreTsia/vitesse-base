@@ -27,7 +27,7 @@ describe("skills", () => {
         expect(track.id).toBeDefined();
         expect(track.description).toBeDefined();
         expect(track.description).not.toBe("");
-        expect(track.ladder).toBeDefined();
+        expect(track.steps).toBeDefined();
       });
     });
   });
@@ -35,8 +35,8 @@ describe("skills", () => {
   it("each track should have a ladder with 5 levels", () => {
     skills.forEach((skill) => {
       skill.tracks.forEach((track) => {
-        expect(track.ladder.length).toBe(5);
-        expect(track.ladder.map((level) => level.score)).toEqual([1, 2, 3, 4, 5]);
+        expect(track.steps.length).toBe(5);
+        expect(track.steps.map((level) => level.score)).toEqual([1, 2, 3, 4, 5]);
       });
     });
   });
@@ -44,7 +44,7 @@ describe("skills", () => {
   it('each scale of track ladder must have at least 3 examples', () => {
     skills.forEach((skill) => {
       skill.tracks.forEach((track) => {
-        track.ladder.forEach((level) => {
+        track.steps.forEach((level) => {
           expect(level.examples.length).toBeGreaterThanOrEqual(3);
         });
       });
